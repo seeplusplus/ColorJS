@@ -83,7 +83,7 @@ Color.prototype.asRgb = function () {
 Color.prototype.asHex = function () {
 	var hexString = '';
 	if (this.isHex()) {
-		return this.stringValue;
+        return (this.stringValue.length === 3) ? this.shortHexToLongHex(this.stringValue) : this.stringValue;
 	}
 	if (!this.isRgb()) {
 		hexString = undefined;

@@ -26,5 +26,6 @@ All of these are proper ways to call the constructor, and all work properly.
 
 # Why? #
 
-I created this for another project I was working on. I'm a perfectionist, however I wanted to create something that could be peer reviewed on GitHub. Input and/or constructive criticism into Color.JS in any shape or form would be greatly appreciated.
+I wanted to create a website, which can be found in the examples folder as ColorChanger.html. I wanted an easy way to convert Hex to Rgb to update the page, thus Color.js was born.
 
+Even though Color.js has fulfilled its original purpose, I want to continue expanding it. That being said, I am open to any suggestions or constructive criticism to this project.

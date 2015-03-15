@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Bubblegum+Sans|Nixie+One);
+
+body{
+    text-align: center;
+}
+::selection{
+    background-color: #999;
+}
+.wrapper{
+    font-family: 'Nixie One', cursive;
+    box-sizing: border-box;
+    padding: 50px;
+    color: white;
+    display: inline-block;
+    background-color: rgba(22,22,22,.5);
+    border: 3px solid white;
+    border-radius: 1em;
+}
+.wrapper h1{
+    font-family: 'Bubblegum Sans', cursive;
+}
+.wrapper input{
+    background-color: rgba(255,255,255,1);
+    border: none;
+    color: #050505;
+    width: 10em;
+}
+a, a:visited, a:active{
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+}
+a:hover{
+    text-decoration: none;
+}

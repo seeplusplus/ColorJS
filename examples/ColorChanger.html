@@ -1,0 +1,39 @@
+<!doctype html>
+
+<link rel="stylesheet" href="ColorChanger.css"/>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="../Color.js"></script>
+
+<div class="wrapper">
+    <h1>Enter Some Colors!</h1>
+
+    <p>
+        <span>#</span>
+        <input class="interactiveColor" id="HexColor" type="text" placeholder="Hexadecimal Color"/>
+    </p>
+
+    <p>
+        <span>RGB(</span>
+        <input class="interactiveColor" id="RgbColor" type="text" placeholder="RGB Color"/>
+        <span>)</span>
+    </p>
+    <p>Visit my <a href="https://github.com/seeplusplus/">GitHub</a></p>
+</div>
+
+<script>
+    $('.interactiveColor').on('change keyup paste', function updateInteracts(event) {
+        var $changedInput = $(event.target), currentColor = new Color($changedInput.val());
+        if (!currentColor.isColor()) {
+            return undefined;
+        }
+        if ($changedInput.attr('id') === 'HexColor') {
+            $('#RgbColor').val(currentColor.asRgb());
+        }
+        if ($changedInput.attr('id') === 'RgbColor') {
+            $('#HexColor').val(currentColor.asHex());
+        }
+        $('body').css('background-color', '#' + currentColor.asHex());
+        $('::selection').css('background-color', '#' + currentColor.asHex());
+    });
+</script>
