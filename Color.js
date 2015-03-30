@@ -107,8 +107,3 @@ Color.prototype.invert = function () {
     }
     return this.rgbArrayToHex(invertedRgbArray);
 };
-
-
-
-var blue = new Color('0000ff');
-blue.invert();
