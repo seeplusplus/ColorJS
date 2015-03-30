@@ -14,6 +14,9 @@ The JS file adds many useful functions that can be used to validate/generate col
 
 + **asHex** - Returns the current instance's color value as a Hexadecimal value.
 
++ **invert** - Returns the inversion of the current instance's color as  Hexadecimal value.
+
+
 # How? #
 
 Once executed, Color.js allows you to create Color objects as follows:
