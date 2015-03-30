@@ -94,3 +94,21 @@ Color.prototype.asHex = function () {
 	}));
 	return hexString;
 };
+
+Color.prototype.invert = function () {
+    var currentColor = this.asHex(),
+        invertedRgbArray = [],
+        currentColorRgbArray =  this.hexToRgbArray(currentColor);
+    for (var value in currentColorRgbArray) {
+        if (!currentColorRgbArray.hasOwnProperty(value)) {
+            continue;
+        }
+        invertedRgbArray.push(Math.abs(255 - parseInt(currentColorRgbArray[value], 10)));
+    }
+    return this.rgbArrayToHex(invertedRgbArray);
+};
+
+
+
+var blue = new Color('0000ff');
+blue.invert();
