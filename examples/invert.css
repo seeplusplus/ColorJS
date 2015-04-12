@@ -1,0 +1,18 @@
+.face {
+	 fill: white;
+ }
+#colorInput, #colorInvert{
+	border: 2px solid #ccc;
+	border-radius: 1em;
+	color: #222;
+	margin-bottom: 1em;
+}
+#colorInput{ 
+	padding: .2em 0 .2em 1em;
+	float:right;
+}
+#colorInvert{ display: block; }
+svg{
+	float:left;
+}
+#colorInvert { display: block; } 
