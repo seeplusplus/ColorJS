@@ -8,21 +8,23 @@ Color.JS is a small object that can be used to convert RGB color notation to Hex
 The JS file adds many useful functions that can be used to validate/generate color formats.
 
 
-+ **isRgb** and **isHex** - Validate the string used to create the instance of an object  of Color as either RGB or Hexadecimal, respectively.
++ **Color.isRgb** and **Color.isHex** - Validate the string used to create the instance of an object  of Color as either RGB or Hexadecimal, respectively.
 
 + **asRgb** - Returns the current instance's color value as an RGB value.
 
 + **asHex** - Returns the current instance's color value as a Hexadecimal value.
 
-+ **invert** - Returns the inversion of the current instance's color as  Hexadecimal value.
++ **asInverted** - Returns the inversion of the current instance's color as  Hexadecimal value.
+
++ **isDark** - Returns true or false if the current instance is found to be a dark color ( true if any rgb value is >126 )
 
 
 # How? #
 
 Once executed, Color.js allows you to create Color objects as follows:
 ```js
-var blue = new Color('0000ff');
-var red = new Colow('255,0,0');
+var blue = new Color('#0000ff');
+var red = new Color('255,0,0');
 var purple = new Color('f0f');
 ```
 All of these are proper ways to call the constructor, and all work properly.

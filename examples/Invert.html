@@ -16,11 +16,14 @@
 		</div>
 		<script>
 			$('#colorInput').on('change keyup paste', function (event){
-					var $changedInput = $(event.target), currentColor = new Color($changedInput.val());
-					if (!currentColor.isColor()) {
+					var $changedInput = $(event.target);
+                    
+                    if (!Color.isRgb($changedInput.val()) && !Color.isHex($changedInput.val())) {
 						return undefined;
 					}
-					console.log(currentColor.asHex());
+                    
+                    var currentColor = new Color($changedInput.val());
+					
 					$('body').css('background-color', '#' + currentColor.asHex());
 					$('.face').css('fill', '#' + currentColor.asHex());
 					$('::selection').css('background-color', '#' + currentColor.asHex());
@@ -28,7 +31,7 @@
 			$('#colorInvert').on('click', function(event){
 				var cInput = $('#colorInput');
 				currentColor = new Color($(cInput).val());
-				$(cInput).val(currentColor.invert());
+				$(cInput).val(currentColor.asInverted());
 				$(cInput).trigger('change');
 			});
 		</script>

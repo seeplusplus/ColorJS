@@ -23,10 +23,12 @@
 
 <script>
     $('.interactiveColor').on('change keyup paste', function updateInteracts(event) {
-        var $changedInput = $(event.target), currentColor = new Color($changedInput.val());
-        if (!currentColor.isColor()) {
+        var $changedInput = $(event.target);
+        if (!Color.isRgb($changedInput.val()) && !Color.isHex($changedInput.val())) {
             return undefined;
         }
+        var currentColor = new Color($changedInput.val());
+
         if ($changedInput.attr('id') === 'HexColor') {
             $('#RgbColor').val(currentColor.asRgb());
         }
